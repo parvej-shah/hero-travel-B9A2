@@ -1,24 +1,133 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interio-A3</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Travel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
-</head>
-<body>
-    <h2 class="text-3xl text-rose-500 font-black">Hello Tailwind</h2>
-</body>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "pBg": "#FF5400",
+              "pTitle": "#131318",
+              "pText": "rgba(19, 19, 24, 0.7)",
+              "navText": "#424247",
+              "sText": "#5A5A5D",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+      .font-mulish {
+        font-family: "Mulish", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="font-mulish">
+    <header class="container mx-auto">
+      <!-- navbar -->
+      <div class="navbar justify-between">
+        <div class="flex items-center gap-2 lg:gap-4">
+          <img src="./images/Group 40071 (2).png" alt="" class="w-12">
+          <a class="text-2xl lg:text-4xl font-black text-pBg"><span class="text-pTitle">Hero</span> Travel</a>
+        </div>
+        <div class="hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-lg text-navText">
+            <li class="font-bold text-pBg"><a>Home</a></li>
+            <li><a>Packages</a></li>
+            <li><a>Testimonial</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:hidden">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class=" lg:hidden">
+              <label class=" swap swap-rotate">
+                <!-- this hidden checkbox controls the state -->
+                <input type="checkbox" />
+                <!-- hamburger icon -->
+                <svg
+                  class="swap-off fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 512 512">
+                  <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                </svg>
+                <!-- close icon -->
+                <svg
+                  class="swap-on fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 512 512">
+                  <polygon
+                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                </svg>
+              </label>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg text-navText">
+            <li class="font-bold text-pBg"><a>Home</a></li>
+            <li><a>Packages</a></li>
+            <li><a>Testimonial</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- hero -->
+      <div class="mx-2 bg-[url('./images/Group13.png')] bg-cover bg-center rounded-2xl mt-8 lg:mt-12">
+        <!-- content -->
+        <div class=" py-8 lg:py-24 bg-gradient-to-b from-pTitle/80 to-transparent rounded-2xl">
+        <div class="hero">
+          <div class="hero-content text-center p-0">
+            <div class="max-w-xl mx-auto">
+              <h1 class="text-4xl lg:text-6xl font-black text-white">Explore Your Travel</h1>
+              <p class="py-6 px-2 lg:text-base text-sm text-white">
+                Embark on a journey with Hero Travel, where your dream destinations become reality. Whether you crave adventure or relaxation, we’re here to guide your perfect getaway.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-4 bg-white/30 lg:max-w-3xl lg:mx-auto rounded-lg mx-6">
+          <input type="text" placeholder="Where to go" class="input w-full  text-pTitle/50"/>
+          <select class="select w-full text-pTitle/50">
+            <option disabled selected>When</option>
+            <option>December</option>
+          </select>
+          <select class="select w-full text-pTitle/50">
+            <option disabled selected>Select type</option>
+            <option>Luxury</option>
+          </select>
+          <button class="btn bg-pBg border-none text-white font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>            
+            Find Now
+          </button>
+        </div>
+      </div>
+      </div>
+    </header>
+    <main>
+    </main>
+    <footer></footer>
+  </body>
 </html>
